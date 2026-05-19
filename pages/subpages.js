@@ -16,6 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // ---- Hamburger Menu Toggle ----
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menuWrapper = document.getElementById('nav-menu-wrapper');
+    if (menuToggle && menuWrapper) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menuWrapper.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        menuWrapper.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                menuWrapper.classList.remove('active');
+            });
+        });
+    }
+
     // ---- Standalone FAQ Accordion ----
     const faqItems = document.querySelectorAll('.faq-page-item');
     faqItems.forEach(item => {
