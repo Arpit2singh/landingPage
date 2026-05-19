@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — publie.ai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../main.css" />
+  <link rel="stylesheet" href="../home.css" />
+  <link rel="stylesheet" href="subpages.css" />
+  <link rel="icon" type="image/png" href="../logo.png" />
+</head>
+
+<body class="subpage-body">
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo" style="cursor: pointer;" onclick="window.location.href='../index.html'">
+      <img src="../logo.png" alt="publie.ai logo" class="logo-img">
+      <span class="logo-text">publie<span class="logo-dot">.ai</span></span>
+      <span class="logo-badge">●</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html#features">Features</a></li>
+      <li><a href="../index.html#workflow">Workflow</a></li>
+      <li><a href="../index.html#pricing">Pricing</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://publie-ai-app.divamtech.com/#/sign-in" target="_blank" class="btn btn-ghost">Login</a>
+      <a href="https://publie-ai-app.divamtech.com/#/sign-in" target="_blank" class="btn btn-primary">Start Publishing</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="legal-hero">
+      <div class="legal-hero-ambient">
+        <div class="ambient-orb orb-a"></div>
+        <div class="ambient-orb orb-b"></div>
+        <div class="ambient-grid"></div>
+      </div>
+      <div class="legal-hero-content">
+        <h1 class="legal-title">Privacy Policy</h1>
+        <p class="legal-meta">
+          <span>Last updated: 28 May 2026</span>
+          <span>·</span>
+          <span>Effective: 28 May 2026</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <article class="legal-content-wrapper">
+      <!-- Intro Section -->
+      <div class="legal-intro">
+        This Privacy Policy explains what data publie.ai (operated by DivamTech, India) collects, why we
+        collect it, how we use it, and the choices you have. We have written it in plain English. If anything is
+        unclear, write to <a href="mailto:privacy@publie.ai" style="color: var(--accent); font-weight: 700; text-decoration: underline;">privacy@publie.ai</a>.
+      </div>
+
+      <!-- Sections -->
+      <section class="legal-section">
+        <h2>1. Who we are</h2>
+        <p>
+          publie.ai is a Software-as-a-Service product operated by DivamTech. For users in India, DivamTech is the
+          data fiduciary under the Digital Personal Data Protection Act, 2023 (DPDP). For users in the EU/UK,
+          DivamTech is the data controller under the GDPR.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. The data we collect</h2>
+        <ul>
+          <li><strong>Account data:</strong> your name, email address, password hash (never the password itself), and locale.</li>
+          <li><strong>AI Persona data:</strong> the goals, tones, language, voice samples, do’s and don’ts that you enter during onboarding and edit in Settings.</li>
+          <li><strong>Content data:</strong> the drafts, chat messages and posts you create using publie.ai, plus the LinkedIn post URN once you publish.</li>
+          <li><strong>LinkedIn connection data:</strong> OAuth access and refresh tokens (encrypted at rest with AES-256-GCM and KMS-managed keys), and your LinkedIn URN. We never see or store your LinkedIn password.</li>
+          <li><strong>Billing data:</strong> plan, subscription status, invoices and tax IDs. Card details are handled directly by our payment partners (Razorpay in India, Stripe globally) and are never stored on our servers.</li>
+          <li><strong>Operational data:</strong> request logs, audit logs (approvals, publishes, billing actions), and aggregated usage metrics used to operate and improve the service.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Why we collect it (legal basis)</h2>
+        <ul>
+          <li>To deliver the service you signed up for (contract).</li>
+          <li>To meet legal and tax obligations such as GST invoicing in India (legal obligation).</li>
+          <li>To keep the service secure, prevent abuse and detect fraud (legitimate interest).</li>
+          <li>To send you product and transactional emails you cannot opt out of (e.g. scheduled-post failure notifications) and product update emails you can opt out of (consent).</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. How we use AI</h2>
+        <p>
+          Your AI Persona, voice samples, drafts and chat messages are passed to our AI providers (currently
+          OpenAI and Anthropic) to generate drafts. We have data-processing agreements with these providers that
+          prohibit using your content to train their public models. Internally, we log only metadata about model
+          runs (model name, prompt template version, token counts and a quality-check verdict), not the prompt
+          text itself in plain form in the long-term audit log.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. How we share data</h2>
+        <p>We do not sell your data. We share it only with:</p>
+        <ul>
+          <li><strong>LinkedIn</strong> - to publish posts you have explicitly approved (via the LinkedIn UGC Posts API).</li>
+          <li><strong>Razorpay (India)</strong> and <strong>Stripe / Paddle (global)</strong> - to process payments.</li>
+          <li><strong>OpenAI / Anthropic</strong> - to generate drafts (see §4).</li>
+          <li><strong>Our cloud and observability vendors</strong> (AWS or GCP, OpenTelemetry backend) - to operate the service.</li>
+          <li><strong>Law enforcement</strong> - only when required by a valid legal process.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Where your data lives</h2>
+        <p>
+          publie.ai is hosted on a managed cloud (AWS or GCP) in primary regions selected for reliability and
+          latency. Backups are encrypted and retained for disaster recovery (PITR, RPO 15 minutes). We can offer
+          EU data residency for enterprise plans on request.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. How long we keep it</h2>
+        <ul>
+          <li><strong>Account data</strong> - for as long as your account is active, plus 30 days after deletion.</li>
+          <li><strong>Drafts</strong> - 90 days unless pinned.</li>
+          <li><strong>Published posts and audit logs</strong> - for the life of your account (audit logs are tamper-evident and required by tax law for at least 8 years for invoicing data).</li>
+          <li><strong>LinkedIn tokens</strong> - until you disconnect, the token expires, or the account is closed.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Your rights</h2>
+        <p>You can, at any time, from Settings → Privacy & Data:</p>
+        <ul>
+          <li>Download your data (Right of Access).</li>
+          <li>Delete your account and all associated personal data (Right to Erasure / Be Forgotten).</li>
+          <li>Disconnect LinkedIn, this immediately pauses all scheduled jobs.</li>
+          <li>Object to processing or restrict it, by emailing <a href="mailto:privacy@publie.ai" style="color: var(--accent); text-decoration: underline;">privacy@publie.ai</a>.</li>
+        </ul>
+        <p>
+          EU/UK users may also lodge a complaint with their local supervisory authority. Indian users may contact
+          the Data Protection Board of India under the DPDP Act.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>9. How we secure your data</h2>
+        <ul>
+          <li>Encryption at rest (AES-256) for the database and object storage; TLS 1.2+ in transit.</li>
+          <li>LinkedIn tokens encrypted with KMS-managed keys and never logged in plain text.</li>
+          <li>Short-lived JWT access tokens with rotating refresh tokens and reuse detection.</li>
+          <li>Rate limits per IP, per user and per endpoint; SAST and dependency scanning in CI; OWASP Top 10 hardening.</li>
+          <li>Quarterly penetration testing from launch + 60 days.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>10. Cookies</h2>
+        <p>
+          We use strictly necessary cookies for authentication (HttpOnly, Secure, SameSite=Lax), and aggregated
+          analytics cookies to understand product usage. We do not use third-party ad-tracking cookies.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>11. Children</h2>
+        <p>
+          publie.ai is intended for working professionals and is not for users under 18. We do not knowingly collect
+          data from children. If you believe we have, write to <a href="mailto:privacy@publie.ai" style="color: var(--accent); text-decoration: underline;">privacy@publie.ai</a> and we will delete it.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>12. Changes to this policy</h2>
+        <p>
+          If we make material changes to this policy, we will notify you by email and in-app at least 14 days before
+          they take effect.
+        </p>
+      </section>
+
+      <section class="legal-section">
+        <h2>13. Contact</h2>
+        <p>
+          <strong>Privacy questions:</strong> <a href="mailto:privacy@publie.ai" style="color: var(--accent); text-decoration: underline;">privacy@publie.ai</a><br>
+          <strong>Security disclosures:</strong> <a href="mailto:security@publie.ai" style="color: var(--accent); text-decoration: underline;">security@publie.ai</a><br>
+          <strong>All other questions:</strong> <a href="mailto:hello@publie.ai" style="color: var(--accent); text-decoration: underline;">hello@publie.ai</a>
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-text">publie<span class="logo-dot">.ai</span></span>
+          <span class="logo-badge">●</span>
+        </div>
+        <p>Build your personal brand on autopilot with our advanced AI digital twin technology.</p>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Product</h4>
+          <a href="../index.html#features">Features</a>
+          <a href="../index.html#workflow">Workflow</a>
+          <a href="../index.html#pricing">Pricing</a>
+        </div>
+        <div class="link-group">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="link-group">
+          <h4>Legal</h4>
+          <a href="privacy.html" style="color: var(--accent); font-weight: 600;">Privacy Policy</a>
+          <a href="terms.html">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 publie.ai. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="subpages.js"></script>
+</body>
+
+</html>
