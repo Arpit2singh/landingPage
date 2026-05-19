@@ -12,7 +12,9 @@
 /* ---- Navbar Adjustment for Subpages ---- */
 .navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 80px;
   display: flex;
   flex-wrap: wrap;
@@ -21,9 +23,10 @@
   padding: 0 6%;
   z-index: 1000;
   background: rgba(248, 246, 242, 0);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid transparent;
 }
+
 .navbar.scrolled {
   height: 64px;
   background: rgba(248, 246, 242, 0.85);
@@ -41,12 +44,14 @@
   overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
+
 .legal-hero-ambient {
   position: absolute;
   inset: 0;
   z-index: -1;
   overflow: hidden;
 }
+
 .legal-title {
   font-size: 3.8rem;
   font-weight: 800;
@@ -55,6 +60,7 @@
   margin-bottom: 16px;
   line-height: 1.15;
 }
+
 .legal-meta {
   font-size: 1.1rem;
   color: var(--text-secondary);
@@ -74,8 +80,15 @@
 }
 
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .legal-intro {
@@ -93,6 +106,7 @@
 .legal-section {
   margin-bottom: 48px;
 }
+
 .legal-section h2 {
   font-size: 1.5rem;
   font-weight: 800;
@@ -102,17 +116,20 @@
   border-bottom: 1px solid var(--border-soft);
   padding-bottom: 8px;
 }
+
 .legal-section p {
   font-size: 1rem;
   line-height: 1.75;
   color: var(--text-secondary);
   margin-bottom: 18px;
 }
+
 .legal-section ul {
   list-style: none;
   margin-bottom: 20px;
   padding-left: 4px;
 }
+
 .legal-section li {
   font-size: 1.02rem;
   line-height: 1.75;
@@ -121,6 +138,7 @@
   padding-left: 28px;
   margin-bottom: 14px;
 }
+
 .legal-section li::before {
   content: '•';
   position: absolute;
@@ -130,6 +148,7 @@
   line-height: 1.1;
   top: 0;
 }
+
 .legal-section strong {
   color: var(--text-primary);
   font-weight: 700;
@@ -139,6 +158,7 @@
 .faq-category {
   margin-bottom: 56px;
 }
+
 .faq-category-title {
   font-size: 1.6rem;
   font-weight: 800;
@@ -151,6 +171,7 @@
   align-items: center;
   gap: 12px;
 }
+
 .faq-category-icon {
   background: var(--accent-light);
   color: var(--accent);
@@ -176,11 +197,13 @@
   transition: all var(--transition);
   background: var(--card-bg);
 }
+
 .faq-page-item.active {
   border-color: var(--accent);
   box-shadow: var(--shadow-sm);
   background: var(--card-bg);
 }
+
 .faq-page-question {
   width: 100%;
   padding: 24px 28px;
@@ -197,9 +220,11 @@
   gap: 16px;
   transition: color var(--transition);
 }
+
 .faq-page-question:hover {
   color: var(--accent);
 }
+
 .faq-page-question .icon {
   font-size: 1.6rem;
   font-weight: 300;
@@ -207,10 +232,12 @@
   color: var(--text-secondary);
   flex-shrink: 0;
 }
+
 .faq-page-item.active .faq-page-question .icon {
   transform: rotate(45deg);
   color: var(--accent);
 }
+
 .faq-page-answer {
   max-height: 0;
   overflow: hidden;
@@ -220,75 +247,159 @@
   color: var(--text-secondary);
   line-height: 1.7;
 }
+
 .faq-page-item.active .faq-page-answer {
-  max-height: 400px; /* High enough to allow full answer content */
+  max-height: 400px;
+  /* High enough to allow full answer content */
   padding-bottom: 24px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .legal-title { font-size: 3.2rem; }
-  .legal-hero { padding: 140px 6% 72px; }
+  .legal-title {
+    font-size: 3.2rem;
+  }
+
+  .legal-hero {
+    padding: 140px 6% 72px;
+  }
 }
 
 @media (max-width: 768px) {
-  .navbar {
-    height: auto;
+  .navbar,
+  .navbar.scrolled {
+    height: auto !important;
     min-height: 80px;
-    padding: 16px 6%;
+    padding: 16px 6% !important;
     gap: 14px 20px;
   }
+
   .nav-actions {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .nav-actions .btn {
     justify-content: center;
   }
-  .legal-title { font-size: 2.5rem; }
-  .legal-hero { padding: 120px 6% 56px; }
-  .legal-meta { font-size: 1rem; }
-  .legal-content-wrapper { margin: 44px auto 96px; padding: 0 18px; }
-  .legal-intro { padding: 22px; margin-bottom: 40px; }
-  .legal-section { margin-bottom: 36px; }
-  .faq-category-title { font-size: 1.4rem; }
-  .faq-page-question { padding: 20px 24px; font-size: 1rem; }
-  .faq-page-item.active .faq-page-answer { padding-bottom: 20px; }
+
+  .legal-title {
+    font-size: 2.5rem;
+  }
+
+  .legal-hero {
+    padding: 120px 6% 56px;
+  }
+
+  .legal-meta {
+    font-size: 1rem;
+  }
+
+  .legal-content-wrapper {
+    margin: 44px auto 96px;
+    padding: 0 18px;
+  }
+
+  .legal-intro {
+    padding: 22px;
+    margin-bottom: 40px;
+  }
+
+  .legal-section {
+    margin-bottom: 36px;
+  }
+
+  .faq-category-title {
+    font-size: 1.4rem;
+  }
+
+  .faq-page-question {
+    padding: 20px 24px;
+    font-size: 1rem;
+  }
+
+  .faq-page-item.active .faq-page-answer {
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    padding: 14px 5%;
-    gap: 12px;
+  .navbar,
+  .navbar.scrolled {
+    height: auto !important;
+    padding: 12px 5% !important;
+    gap: 10px;
   }
+
   .nav-actions {
     gap: 10px;
   }
+
   .nav-actions .btn {
     width: min(100%, 220px);
     padding: 9px 14px;
     font-size: 0.82rem;
   }
-  .legal-title { font-size: 2rem; }
-  .legal-hero { padding: 108px 5% 48px; }
-  .legal-content-wrapper { padding: 0 14px; }
+
+  .legal-title {
+    font-size: 2rem;
+  }
+
+  .legal-hero {
+    padding: 108px 5% 48px;
+  }
+
+  .legal-content-wrapper {
+    padding: 0 14px;
+  }
+
   .legal-intro {
     padding: 18px;
     border-left-width: 3px;
     margin-bottom: 32px;
   }
-  .legal-section h2 { font-size: 1.25rem; }
+
+  .legal-section h2 {
+    font-size: 1.25rem;
+  }
+
   .legal-section p,
-  .legal-section li { font-size: 0.95rem; }
-  .legal-section li { padding-left: 24px; }
-  .faq-category { margin-bottom: 40px; }
+  .legal-section li {
+    font-size: 0.95rem;
+  }
+
+  .legal-section li {
+    padding-left: 24px;
+  }
+
+  .faq-category {
+    margin-bottom: 40px;
+  }
+
   .faq-category-title {
     font-size: 1.2rem;
     gap: 10px;
   }
-  .faq-category-icon { width: 34px; height: 34px; font-size: 1rem; }
-  .faq-page-question { padding: 18px 18px; font-size: 0.95rem; gap: 12px; }
-  .faq-page-answer { padding: 0 18px; font-size: 0.95rem; }
-  .faq-page-item.active .faq-page-answer { padding-bottom: 18px; }
+
+  .faq-category-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .faq-page-question {
+    padding: 18px 18px;
+    font-size: 0.95rem;
+    gap: 12px;
+  }
+
+  .faq-page-answer {
+    padding: 0 18px;
+    font-size: 0.95rem;
+  }
+
+  .faq-page-item.active .faq-page-answer {
+    padding-bottom: 18px;
+  }
 }
