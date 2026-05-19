@@ -15,6 +15,7 @@
   top: 0; left: 0; right: 0;
   height: 80px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 0 6%;
@@ -225,10 +226,69 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .legal-title { font-size: 3.2rem; }
+  .legal-hero { padding: 140px 6% 72px; }
+}
+
 @media (max-width: 768px) {
-  .legal-title { font-size: 2.8rem; }
-  .legal-hero { padding: 120px 6% 60px; }
+  .navbar {
+    height: auto;
+    min-height: 80px;
+    padding: 16px 6%;
+    gap: 14px 20px;
+  }
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-actions .btn {
+    justify-content: center;
+  }
+  .legal-title { font-size: 2.5rem; }
+  .legal-hero { padding: 120px 6% 56px; }
+  .legal-meta { font-size: 1rem; }
+  .legal-content-wrapper { margin: 44px auto 96px; padding: 0 18px; }
+  .legal-intro { padding: 22px; margin-bottom: 40px; }
+  .legal-section { margin-bottom: 36px; }
   .faq-category-title { font-size: 1.4rem; }
   .faq-page-question { padding: 20px 24px; font-size: 1rem; }
   .faq-page-item.active .faq-page-answer { padding-bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 14px 5%;
+    gap: 12px;
+  }
+  .nav-actions {
+    gap: 10px;
+  }
+  .nav-actions .btn {
+    width: min(100%, 220px);
+    padding: 9px 14px;
+    font-size: 0.82rem;
+  }
+  .legal-title { font-size: 2rem; }
+  .legal-hero { padding: 108px 5% 48px; }
+  .legal-content-wrapper { padding: 0 14px; }
+  .legal-intro {
+    padding: 18px;
+    border-left-width: 3px;
+    margin-bottom: 32px;
+  }
+  .legal-section h2 { font-size: 1.25rem; }
+  .legal-section p,
+  .legal-section li { font-size: 0.95rem; }
+  .legal-section li { padding-left: 24px; }
+  .faq-category { margin-bottom: 40px; }
+  .faq-category-title {
+    font-size: 1.2rem;
+    gap: 10px;
+  }
+  .faq-category-icon { width: 34px; height: 34px; font-size: 1rem; }
+  .faq-page-question { padding: 18px 18px; font-size: 0.95rem; gap: 12px; }
+  .faq-page-answer { padding: 0 18px; font-size: 0.95rem; }
+  .faq-page-item.active .faq-page-answer { padding-bottom: 18px; }
 }
